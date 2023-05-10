@@ -1,0 +1,17 @@
+.element {
+  max-width: 282px;
+  /* width: 100%; */
+  min-height: 361px;
+  /* height: 100%; */
+  background-color: #fff;
+  border-radius: 10px 10px 10px 10px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto min-content;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.element:hover {
+  cursor: pointer;
+}

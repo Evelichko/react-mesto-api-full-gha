@@ -1,0 +1,33 @@
+.elements {
+  margin: 51px auto 67px;
+  padding: 0;
+  max-width: 880px;
+}
+
+@media screen and (max-width: 920px) {
+  .elements {
+    margin-left: 19px;
+    margin-right: 19px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .elements {
+    margin: 51px auto 67px;
+    max-width: 581px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .elements {
+    margin-left: 19px;
+    margin-right: 19px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .elements {
+    margin: 0 auto 48px;
+    max-width: 282px;
+  }
+}

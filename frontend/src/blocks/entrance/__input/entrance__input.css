@@ -1,0 +1,18 @@
+.entrance__input {
+    font-style: inherit;
+    color: #fff;
+    display: block;
+    max-width: 260px;
+    width: 100%;
+    border: 0;
+    border-radius: 2px;
+    border-bottom: 2px solid #cccccc;
+    background-color: transparent;
+    min-height: 27px;
+    margin: 31px auto 0;    
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.94px;
+    padding: 0;
+  }

@@ -1,0 +1,26 @@
+.profile {
+  max-width: 880px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: min-content minmax(min-content, max-content) 24px auto;
+  grid-template-rows: auto min-content;
+  column-gap: 26px;
+}
+
+@media screen and (max-width: 900px) {
+  .profile {
+    margin-left: 27px;
+    margin-right: 27px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .profile {
+    grid-template-columns: 245px auto;
+    grid-template-rows: auto auto auto 1fr;
+    max-width: 282px;
+    width: 100%;
+    margin: 42px auto 36px;
+    /* column-gap: 10px; */
+  }
+}

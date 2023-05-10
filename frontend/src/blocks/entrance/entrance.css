@@ -1,0 +1,5 @@
+.entrance{
+  /* min-height: calc(100vh - 282px); */
+  display: flex;
+  flex-direction: column;
+}

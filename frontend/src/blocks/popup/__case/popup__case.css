@@ -1,0 +1,12 @@
+.popup__case {
+    max-width: 430px;
+    max-height: 181px;
+    background-color: #FFF;
+    position: relative;
+    border-radius: 10px;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    z-index: 4;
+}

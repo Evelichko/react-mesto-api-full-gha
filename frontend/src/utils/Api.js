@@ -97,10 +97,14 @@ class Api {
 const token = localStorage.getItem('token');
 
 const newApi = new Api({
-    baseUrl: 'http://localhost:3000',
+    // baseUrl: 'http://localhost:3000',
+    baseUrl: 'https://velichkoo.nomoredomains.monster',
     headers: {
         authorization: `Bearer ${token}`,
-        'Content-type': 'application/json'
+        
+        // 'Access-Control-Allow-Methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
+        // 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+        // 'Access-Control-Allow-Origin': '*' 
     }
 });
 

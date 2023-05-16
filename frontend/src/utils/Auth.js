@@ -1,4 +1,5 @@
-export const BASE_URL = 'http://localhost:3000';
+export const BASE_URL = 'https://velichkoo.nomoredomains.monster';
+// const BASE_URL = 'http://localhost:3000';
 
 const checkResponse = (res) => {
   if (res.ok) {
@@ -12,7 +13,6 @@ export const register = (password, email) => {
   return fetch(`${BASE_URL}/signup`, {
     method: 'POST',
     headers: {
-      'Accept': 'application/json',
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({

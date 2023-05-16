@@ -16,7 +16,6 @@ const handleError = require('./middlewares/handleError');
 const NotFoundError = require('./errors/NotFoundError');
 
 const app = express();
-
 const { PORT = 3000 } = process.env;
 
 app.use(cors());
@@ -28,6 +27,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(requestLogger);
+
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
 
 app.use('/', routeSignUp);
 app.use('/', routeSignIn);

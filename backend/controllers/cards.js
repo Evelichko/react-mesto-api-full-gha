@@ -16,7 +16,7 @@ function createCard(req, res, next) {
   const userId = req.user._id;
   Card
     .create({ name, link, owner: userId })
-    .then((card) => res.status(201).send({ data: card }))
+    .then((card) => res.status(201).send(card))
     .catch((err) => {
       if (err.name === 'ValidationError') {
         next(new InaccurateDataError('Переданы некорректные данные при создании карточки'));
@@ -42,7 +42,7 @@ function likeCard(req, res, next) {
       },
     )
     .then((card) => {
-      if (card) return res.status(200).send({ data: card });
+      if (card) return res.status(200).send(card);
       throw new NotFoundError('Карточка с указанным id не найдена');
     })
     .catch((err) => {
@@ -70,7 +70,7 @@ function dislikeCard(req, res, next) {
       },
     )
     .then((card) => {
-      if (card) return res.send({ data: card });
+      if (card) return res.send(card);
 
       throw new NotFoundError('Данные по указанному id не найдены');
     })
@@ -95,7 +95,7 @@ function deleteCard(req, res, next) {
       const id = card._id.toString();
       Card
         .findByIdAndRemove(id)
-        .then(() => res.send({ data: card }))
+        .then(() => res.send(card))
         .catch(next);
     })
     .catch((err) => {

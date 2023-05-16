@@ -58,7 +58,7 @@ function getCurrentUserInfo(req, res, next) {
 function getAllUsers(req, res, next) {
   User
     .find({})
-    .then((users) => res.send({ data: users }))
+    .then((users) => res.send(users))
     .catch(next);
 }
 
@@ -127,7 +127,7 @@ function setUserAvatar(req, res, next) {
       },
     )
     .then((user) => {
-      if (user) return res.send({ data: user });
+      if (user) return res.send(user);
 
       throw new NotFoundError('Пользователь с таким id не найден');
     })

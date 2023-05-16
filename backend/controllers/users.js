@@ -6,6 +6,8 @@ const NotFoundError = require('../errors/NotFoundError');
 const ConflictError = require('../errors/ConflictError');
 const InaccurateDataError = require('../errors/InaccurateDataError');
 
+const JWT_SECRET = require('../utils/constants');
+
 function createUser(req, res, next) {
   const {
     email,
@@ -159,7 +161,7 @@ async function login(req, res, next) {
       {
         _id: user._id,
       },
-      'secretKey',
+      process.env.NODE_ENV !== 'production' ? JWT_SECRET : 'secretKey',
       {
         expiresIn: '7d',
       },

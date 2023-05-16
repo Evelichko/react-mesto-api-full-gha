@@ -1,3 +1,8 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
 # Logs
 logs
 *.log
@@ -13,11 +18,6 @@ node_modules
 .DS_Store
 .idea
 .vscode
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
 
 # testing
 /coverage

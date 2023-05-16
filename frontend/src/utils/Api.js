@@ -94,12 +94,13 @@ class Api {
     }
 }
 
+const token = localStorage.getItem('token');
 
 const newApi = new Api({
-    baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-55',
+    baseUrl: 'http://localhost:3000',
     headers: {
-        authorization: '8ef9753a-56c8-46fe-95ac-52c3354ee4d6',
-        'Content-Type': 'application/json'
+        authorization: `Bearer ${token}`,
+        'Content-type': 'application/json'
     }
 });
 

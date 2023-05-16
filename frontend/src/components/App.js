@@ -11,7 +11,7 @@ import newApi from '../utils/Api.js';
 import EditProfilePopup from './EditProfilePopup';
 import EditAvatarPopup from './EditAvatarPopup';
 import AddPlacePopup from './AddPlacePopup';
-import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import ProtectedRoute from "./ProtectedRoute.js";
 import InfoTooltip from './InfoTooltip.js';
 import Register from './Register.js';
@@ -40,14 +40,14 @@ function App() {
       auth.checkToken(token)
         .then(data => {
           if (data) {
-            setEmail(data.data.email);
+            setEmail(email);
             handleLoggedIn();
             navigate("/");
           }
         })
         .catch((err) => console.log(err))
     }
-  }, [navigate]);
+  }, [email, navigate]);
 
   useEffect(() => {
     if (loggedIn) {
@@ -82,7 +82,7 @@ function App() {
   }
 
   function handleCardLike(card) {
-    const isLiked = card.likes.some((like) => like._id === currentUser._id);
+    const isLiked = card.likes.some((id) => id === currentUser._id);
     newApi.changeLikeCardStatus(card._id, !isLiked)
       .then((newCard) => {
         setCards((state) => state.map((c) => c._id === card._id ? newCard : c));
@@ -160,7 +160,7 @@ function App() {
       .then(data => {
         if (data) {
           openInfoTooltip(true);
-          navigate('/sign-in', { replace: true })
+          navigate('/signin', { replace: true })
         }
       })
       .catch(err => {
@@ -172,10 +172,10 @@ function App() {
   function handleLogin(password, email) {
     auth.login(password, email)
       .then(data => {
-        if (data.token) {
+       if (data.jwt) {
           setEmail(email);
           handleLoggedIn();
-          localStorage.setItem('token', data.token);
+           localStorage.setItem('token', data.jwt);
           navigate('/', { replace: true })
         }
       })
@@ -189,6 +189,7 @@ function App() {
     localStorage.removeItem('token');
     setLoggedIn(false);
     setEmail('');
+    navigate('/signin', { replace: true })
   }
 
   return (

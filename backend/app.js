@@ -45,9 +45,9 @@ app.use(auth);
 app.use('/users', routeUsers);
 app.use('/cards', routeCards);
 
-app.use(errorLogger);
-
 app.use((req, res, next) => next(new NotFoundError('Страницы с таким адресом нет')));
+
+app.use(errorLogger);
 
 app.use(errors());
 

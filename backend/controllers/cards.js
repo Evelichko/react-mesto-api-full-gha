@@ -99,7 +99,7 @@ function deleteCard(req, res, next) {
         .catch(next);
     })
     .catch((err) => {
-      if (err.name === 'ValidationError') {
+      if (err.name === 'CastError') {
         next(new InaccurateDataError('Передан некорректный id'));
       } else {
         next(err);

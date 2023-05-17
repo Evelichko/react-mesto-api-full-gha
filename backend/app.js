@@ -16,7 +16,7 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 const handleError = require('./middlewares/handleError');
 const NotFoundError = require('./errors/NotFoundError');
 
-const MONGODB_URL = require('./utils/constants');
+const { MONGODB_URL } = require('./utils/constants');
 
 const app = express();
 const { PORT = 3000 } = process.env;

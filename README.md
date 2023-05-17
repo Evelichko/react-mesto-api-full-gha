@@ -1,15 +1,15 @@
-[![Tests](https://github.com/yandex-praktikum/react-mesto-api-full-gha/actions/workflows/tests.yml/badge.svg)](https://github.com/yandex-praktikum/react-mesto-api-full-gha/actions/workflows/tests.yml)
-# react-mesto-api-full
-Репозиторий для приложения проекта `Mesto`, включающий фронтенд и бэкенд части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с карточками и пользователями. Бэкенд расположите в директории `backend/`, а фронтенд - в `frontend/`. 
-  
-Пожалуйста, прикрепите в это описание ссылку на сайт, размещенный на Яндекс.Облаке.
+## Описание проекта Mesto
 
-Адрес репозитория: https://github.com/...
+Проект представляет собой приложение написанное на "React" (часть frontend) и "Node" (часть backend), с возможностью регистрации личного кабинета пользователя, редактированием данных и добавлением фотокарточек в общую галерею.
 
-## Ссылки на проект
+Адрес репозитория: https://github.com/evelichko/react-mesto-api-full-gha
 
-IP-адрес x.x.x.x
+Ссылки на проект:
+IP 158.160.106.101
+Frontend https://velichko.nomoredomains.work
+Backend https://velichkoo.nomoredomains.work
 
-Frontend https://...
+## Стек технологий
 
-Backend https://...
+React, React Router, JavaScript, CSS3, HTML5, Express, Node JS, MongoDB, NGINX
+

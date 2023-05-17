@@ -6,8 +6,8 @@
 
 Ссылки на проект:
 IP 158.160.106.101
-Frontend https://velichko.nomoredomains.work
-Backend https://velichkoo.nomoredomains.work
+Frontend https://velichko.nomoredomains.monster
+Backend https://velichkoo.nomoredomains.monster
 
 ## Стек технологий
 
